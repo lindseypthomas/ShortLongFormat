@@ -131,7 +131,7 @@ function buildChart() {
           anchor: 'end', align: 'end', offset: -2,
           color: '#64748b',
           font: { size: 8, weight: '500', family: 'Inter, sans-serif' },
-          formatter: v => shortFmt(v)
+          formatter: v => hcFormat === 'short' ? shortFmt(v) : longFmt(v)
         }
       },
       scales: {
